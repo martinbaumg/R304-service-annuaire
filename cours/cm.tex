@@ -139,5 +139,35 @@ ordinateurs et des utilisateurs dans un environnement Active Directory et
 permettent de configurer de manière centralisée les paramètres de l'ensemble 
 des objets d'un domaine.
 
+\subsection{Concept de l'active directory}
+L'Active Directory est un service de répertoire qui permet la gestion 
+centralisée des informations de l'entreprise, telles que les utilisateurs, 
+les ordinateurs et les imprimantes. Il utilise le protocole LDAP 
+(Lightweight Directory Access Protocol) pour permettre l'accès à ces 
+informations. LDAP est un protocole de réseau qui permet de lire et de 
+modifier les informations stockées dans un annuaire de données, comme 
+l'Active Directory. En utilisant LDAP, les applications peuvent accéder et 
+gérer les informations de l'annuaire de manière standardisée et sécurisée.\\
+
+
+\subsection{Les rôles FSMO dans Active Directory}
+Les rôles FSMO (Flexible Single Master Operations) sont des rôles de domaines 
+spéciaux dans un environnement Active Directory qui sont détenus par un seul 
+contrôleur de domaine dans un domaine donné. Il y a cinq rôles FSMO différents 
+qui peuvent être affectés à des contrôleurs de domaine différents dans un 
+environnement Active Directory :\\
+
+\begin{itemize}
+    \item \textbf{Rôle du maître unique de l'annuaire (RID)} : Ce rôle est responsable de la distribution de séries uniques de numéros de sécurité (SID) et de numéros de réplication de l'identificateur (RID) aux nouveaux comptes d'objets de l'annuaire créés dans le domaine.
+    \item \textbf{Rôle du maître unique de la stratégie de groupe (PDC)} : Ce rôle est responsable de la mise à jour de la stratégie de groupe et de la synchronisation des horloges dans le domaine.
+    \item \textbf{Rôle du maître unique de la hiérarchie de noms (PDN)} : Ce rôle est responsable de l'ajout et de la suppression de domaines de l'annuaire.
+    \item \textbf{Rôle du maître unique de la stratégie de noms (PDN)} : Ce rôle est responsable de la modification de la stratégie de noms et de la définition de la stratégie de noms par défaut pour le domaine.
+    \item \textbf{Rôle du maître unique de la base de données de certification (PDC)} : Ce rôle est responsable de la révocation de certificats et de la gestion de la base de données de certification de l'annuaire.\\
+    
+\end{itemize}
+
+Il est recommandé de répartir ces rôles sur plusieurs contrôleurs 
+de domaine pour assurer la redondance et la disponibilité des fonctionnalités 
+associées à chaque rôle.
 
 \end{document}
